@@ -35,5 +35,11 @@ public class Main {
         long n =0;
         n = encrypt();
         System.out.println(n);
+        int[] key = new int[]{4, 4, 3, 6};
+        TEAFunc test = new TEAFunc(key);
+        int[] enc = test.encrypt("hi");
+        System.out.println(enc[0] + "  " + enc[1]);
+        int[] ans = test.decrypt(enc);
+        System.out.println(ans[0] + "  " + ans[1]);
     }
 }
